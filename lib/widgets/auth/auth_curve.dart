@@ -12,9 +12,12 @@ class AuthCurve extends StatelessWidget {
           painter: AuthPainter(),
           size: const Size(double.infinity, 200),
         ),
-        Align(
-          alignment: Alignment.topRight,
-          child: RawMaterialButton(onPressed: () => Navigator.of(context).pop(),
+        Positioned(
+          top: 10,
+          right: 10,
+          child: RawMaterialButton(
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            onPressed: () => Navigator.of(context).pop(),
             constraints: BoxConstraints.tight(const Size(22, 22)),
             fillColor: Colors.white, shape: const CircleBorder(),
           child: const Icon(Icons.close, size: 20, color: themeColorDarkest,),),
