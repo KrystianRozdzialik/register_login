@@ -19,11 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: Center(
-          child: InkWell(
-              onTap: () => login(context), child: const Text("Login")),),
-        appBar: AppBar(title: const Text("data")),
-    ));
+      home: Builder(
+        builder: (context) => Scaffold(
+          body: Center(
+            child: InkWell(
+                onTap: () => login(context), child: const Text("Login")),),
+          appBar: AppBar(title: const Text("data")),
+            ),
+      ));
   }
 }
