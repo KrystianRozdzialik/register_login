@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-const themeColorDarkest = Color.fromRGBO(2,18,68,255);
-const themeColorDark = Color.fromRGBO(55,43,167,255);
-const themeColor = Color.fromRGBO(114,97,254,255);
-const themeColorLight = Color.fromRGBO(55,165,255,255);
-const themeColorLighter = Color.fromRGBO(195,217,235,255);
+const themeColorDarkest = Color(0xff021244);
+const themeColorDark = Color(0xff372ba7);
+const themeColor = Color(0xff7261fe);
+const themeColorLighter = Color(0xff37a5ff);
+const themeColorLightest = Color(0xffc3d9eb);
 const errorThemeColor = Color(0xFFB22222);

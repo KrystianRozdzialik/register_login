@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:register_login/auth_curve.dart';
+import 'package:register_login/widgets/auth/auth_curve.dart';
 
 class AuthWrapper extends StatelessWidget {
   const AuthWrapper({super.key});
