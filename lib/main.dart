@@ -8,24 +8,28 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  login(BuildContext context){
-    DialogUtil.openLoginPopup(context);
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'register_login',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Builder(
-        builder: (context) => Scaffold(
-          body: Center(
-            child: InkWell(
-                onTap: () => login(context), child: const Text("Login")),),
-          appBar: AppBar(title: const Text("data")),
-            ),
-      ));
+      home: const HomePage());
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: InkWell(
+            onTap: () => DialogUtil.openLoginPopup(context, dismissible: false), child: const Text("Login")),),
+      appBar: AppBar(title: const Text("data")),
+    );
   }
 }
