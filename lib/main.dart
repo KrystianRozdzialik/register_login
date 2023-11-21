@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:register_login/utils/dialog_util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,8 +8,8 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  login(){
-
+  login(BuildContext context){
+    DialogUtil.openLoginPopup(context);
   }
 
   @override
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: Center(child: InkWell(onTap: login, child: const Text("Login")),),
+        body: Center(
+          child: InkWell(
+              onTap: () => login(context), child: const Text("Login")),),
         appBar: AppBar(title: const Text("data")),
     ));
   }
